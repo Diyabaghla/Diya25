@@ -16,39 +16,6 @@
       line-height: 1.6;
     }
 
-    /* Navbar */
-    header {
-      background: linear-gradient(90deg, #42a5f5, #64b5f6);
-      padding: 1rem 3rem;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    }
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .logo {
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: white;
-    }
-    .nav-links {
-      display: flex;
-      list-style: none;
-      margin-left: auto;
-    }
-    .nav-links li { margin-left: 2rem; }
-    .nav-links li a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-    .nav-links li a:hover { color: #ffe082; }
-
     /* Section Title */
     h1 {
       margin: 2rem 8% 1.5rem;
@@ -89,7 +56,7 @@
     .skill::after {
       content: attr(data-skill);
       position: absolute;
-      bottom: -1.8rem;
+      bottom: -2.2rem;
       left: 50%;
       transform: translateX(-50%);
       background-color: #555;
@@ -110,6 +77,52 @@
     .programming { border-left: 5px solid #4caf50; }
     .tool { border-left: 5px solid #ff9800; }
 
+    /* Responsive */
+    @media (max-width: 1024px) {
+      h1 {
+        margin: 2rem 6% 1.5rem;
+        font-size: 1.8rem;
+      }
+      .skills-grid {
+        padding: 0 6% 2.5rem;
+        gap: 1.2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        text-align: center;
+        border-left: none;
+        padding-left: 0;
+        font-size: 1.6rem;
+      }
+      .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        padding: 0 5% 2rem;
+      }
+      .skill {
+        padding: 1.2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .skills-grid {
+        grid-template-columns: 1fr 1fr; /* Two columns on small phones */
+        gap: 1rem;
+      }
+      .skill {
+        padding: 1rem;
+        font-size: 0.9rem;
+      }
+      .skill::after {
+        font-size: 0.7rem;
+        bottom: -2rem;
+        white-space: normal; /* Wrap text on very small devices */
+        width: max-content;
+        max-width: 90px;
+        text-align: center;
+      }
+    }
   </style>
 </head>
 <body>
@@ -133,9 +146,7 @@
     <div class="skill tool" data-skill="Presentations and design">MS PowerPoint</div>
   </div>
   
-
 <script>
-  
   // Load navbar into placeholder
   fetch("navbar.html")
     .then(response => response.text())

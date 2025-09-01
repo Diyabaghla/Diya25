@@ -239,6 +239,12 @@
       <a href="https://diabetes-prediction-analysis-1.onrender.com/" target="_blank" class="btn"><i class="fa-solid fa-play"></i> Try Here</a>
     </div>
   </section>
+  <script>
+  // Load navbar into placeholder
+  fetch("navbar.html")
+    .then(response => response.text())
+    .then(data => document.getElementById("navbar-placeholder").innerHTML = data);
+</script>
 
 </body>
 </html>

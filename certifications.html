@@ -77,12 +77,55 @@
       color: #fff;
       transform: scale(1.05);
     }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      h1 {
+        margin: 2rem 5% 1.5rem;
+        font-size: 1.8rem;
+      }
+      .cert-grid {
+        padding: 0 5% 2.5rem;
+        gap: 1.5rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.6rem;
+        text-align: center;
+        border-left: none;
+        padding-left: 0;
+      }
+      .cert-card {
+        padding: 1.2rem;
+      }
+      .cert-card h3 {
+        font-size: 0.95rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .cert-grid {
+        grid-template-columns: 1fr; /* Single column */
+        gap: 1rem;
+      }
+      .cert-card {
+        padding: 1rem;
+      }
+      .cert-card h3 {
+        font-size: 0.9rem;
+      }
+      .cert-card a {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.8rem;
+      }
+    }
   </style>
 </head>
 <body>
   <div id="navbar-placeholder"></div>
    
-
   <h1>My Certifications</h1>
 
   <div class="cert-grid">
@@ -140,7 +183,6 @@
     </div>
   </div>
   
-
 <script>
   // Load navbar into placeholder
   fetch("navbar.html")
@@ -149,6 +191,7 @@
 </script>
 </body>
 </html>
+
 
 <!-- <!DOCTYPE html>
 <html lang="en">
