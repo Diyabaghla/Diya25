@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <title>Skills</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #fdfdfd;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Navbar */
+    header {
+      background: linear-gradient(90deg, #42a5f5, #64b5f6);
+      padding: 1rem 3rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: white;
+    }
+    .nav-links {
+      display: flex;
+      list-style: none;
+      margin-left: auto;
+    }
+    .nav-links li { margin-left: 2rem; }
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    .nav-links li a:hover { color: #ffe082; }
+
+    /* Section Title */
+    h1 {
+      margin: 2rem 8% 1.5rem;
+      font-size: 2rem;
+      color: #1565c0;
+      border-left: 6px solid #42a5f5;
+      padding-left: 10px;
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1.5rem;
+      padding: 0 8% 3rem;
+    }
+
+    .skill {
+      background: white;
+      color: #222;
+      padding: 1.5rem 1rem;
+      border-radius: 12px;
+      text-align: center;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .skill:hover {
+      background: #e3f2fd;
+      transform: scale(1.07) translateY(-4px);
+      box-shadow: 0 8px 20px rgba(66, 165, 245, 0.25);
+    }
+
+    /* Tooltip */
+    .skill::after {
+      content: attr(data-skill);
+      position: absolute;
+      bottom: -1.8rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #555;
+      color: #fff;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      opacity: 0;
+      pointer-events: none;
+      white-space: nowrap;
+      transition: opacity 0.3s ease;
+    }
+    .skill:hover::after { opacity: 1; }
+
+    /* Categories */
+    .ai { border-left: 5px solid #9c27b0; }
+    .web { border-left: 5px solid #03a9f4; }
+    .programming { border-left: 5px solid #4caf50; }
+    .tool { border-left: 5px solid #ff9800; }
+
+  </style>
+</head>
+<body>
+  <div id="navbar-placeholder"></div> 
+
+  <h1>My Skills</h1>
+  <div class="skills-grid">
+    <div class="skill programming" data-skill="Experienced in Python scripting and automation">Python</div>
+    <div class="skill programming" data-skill="Core and OOPs concepts">Java</div>
+    <div class="skill programming" data-skill="Low-level programming and problem-solving">C/C++</div>
+    <div class="skill web" data-skill="Web structure and semantics">HTML</div>
+    <div class="skill web" data-skill="Styling and responsiveness">CSS</div>
+    <div class="skill web" data-skill="Basic DOM and interactivity">JavaScript</div>
+    <div class="skill ai" data-skill="Database query and management">SQL</div>
+    <div class="skill ai" data-skill="Version control & collaboration">Git & GitHub</div>
+    <div class="skill ai" data-skill="ML algorithms and projects">Machine Learning</div>
+    <div class="skill ai" data-skill="Neural networks, CNN, RNN">Deep Learning</div>
+    <div class="skill ai" data-skill="Building intelligent systems">Artificial Intelligence</div>
+    <div class="skill programming" data-skill="Data structures and algorithms">Data Structures</div>
+    <div class="skill tool" data-skill="Documentation and reporting">MS Office</div>
+    <div class="skill tool" data-skill="Presentations and design">MS PowerPoint</div>
+  </div>
+  
+
+<script>
+  
+  // Load navbar into placeholder
+  fetch("navbar.html")
+    .then(response => response.text())
+    .then(data => document.getElementById("navbar-placeholder").innerHTML = data);
+</script>
+</body>
+</html>

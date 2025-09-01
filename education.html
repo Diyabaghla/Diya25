@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Education</title>
+  
+  <style>
+   * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fdfdfd;
+      color: #333;
+      line-height: 1.6;
+    }
+   
+   
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .accordion {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .accordion-item {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin-bottom: 1rem;
+      overflow: hidden;
+    }
+
+    .accordion-btn {
+      background-color: #f1f1f1;
+      color: #333;
+      cursor: pointer;
+      padding: 1rem;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+
+    .accordion-btn:hover {
+      background-color: #ddd;
+    }
+
+    .accordion-content {
+      padding: 0 1rem 1rem 1rem;
+      display: none;
+      background-color: #fafafa;
+      border-left: 3px solid #333;
+    }
+
+    .accordion-item.active .accordion-content {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+   <!-- Navbar -->
+  <div id="navbar-placeholder"></div>
+  <h1>My Education</h1>
+  <div class="accordion">
+    <div class="accordion-item">
+      <button class="accordion-btn">Bachelor of Technology in Computer Science</button>
+      <div class="accordion-content">
+        <p><strong>Institution:</strong> Punjabi University Patiala</p>
+        <p><strong>Year:</strong> 2022 – 2026</p>
+        <p><strong>CGPA:</strong> 9.61</p>
+        <p><strong>Percentage:</strong> 96.1</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-btn">Secondary Education</button>
+      <div class="accordion-content">
+        <p><strong>Institution:</strong> Government Girls School</p>
+        <p><strong>Year:</strong> 2021 – 2022</p>
+        <p><strong>Percentage:</strong> 95.2</p>
+        <p><strong>PCM:</strong> 97</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-btn">Matriculation</button>
+      <div class="accordion-content">
+        <p><strong>Institution:</strong> Saint Kabir Gurukul</p>
+        <p><strong>Year:</strong> 2019 – 2020</p>
+        <p><strong>Percentage:</strong> 90.5</p>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.querySelectorAll('.accordion-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.parentElement.classList.toggle('active');
+      });
+    });
+    // Load navbar into placeholder
+  fetch("navbar.html")
+    .then(response => response.text())
+    .then(data => document.getElementById("navbar-placeholder").innerHTML = data);
+  </script>
+</body>
+</html>
+
+
+
+
+
+  

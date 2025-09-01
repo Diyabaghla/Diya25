@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Projects</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fdfdfd;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Navbar */
+    header {
+      background: linear-gradient(90deg, #42a5f5, #64b5f6);
+      padding: 1rem 3rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: white;
+    }
+    .nav-links {
+      display: flex;
+      list-style: none;
+      margin-left: auto;
+    }
+    .nav-links li { margin-left: 2rem; }
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    .nav-links li a:hover { color: #ffe082; }
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #0d47a1, #1976d2);
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    /* Project Sections */
+    .project-section {
+      padding: 4rem 2rem;
+      width: 100%;
+    }
+    .project {
+      max-width: 1200px;
+      margin: auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .project:hover {
+      transform: scale(1.02);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+    .project h2 {
+      color: #0d47a1;
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+    }
+    .project p {
+      line-height: 1.6;
+    }
+    .project ul {
+      padding-left: 0.5rem;
+      margin: 1rem 0;
+    }
+    .project ul li {
+      margin-bottom: 0.6rem;
+    }
+    .tech {
+      font-weight: 600;
+      margin-top: 1rem;
+      color: #444;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      background: #0d47a1;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.3s;
+      font-weight: 500;
+      margin-right: 0.5rem;
+    }
+    .btn:hover {
+      background: #1565c0;
+    }
+    
+    /* Responsive */
+    @media(max-width: 768px) {
+      section { padding: 3rem 5%; }
+      .nav-links { display: none; }
+      .burger { display: block; cursor: pointer; }
+      .burger .line {
+        width: 25px; height: 3px; background: white; margin: 5px;
+      }
+      .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 0; top: 60px;
+        background: #64b5f6;
+        width: 200px;
+        padding: 1rem;
+      }
+      .nav-links li { margin: 1rem 0; }
+    }
+  </style>
+</head>
+<body>
+
+   <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">MyPortfolio</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html">About</a></li>
+        <li><a href="certifications.html">Certification</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+      </ul>
+      <div class="burger" id="burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>🚀 My Projects</h1>
+    <p>Here are my top projects that showcase my expertise in <strong>Machine Learning</strong>, <strong>Artificial Intelligence</strong>, and <strong>Web Development</strong>. Each project is designed to solve real-world challenges and enhance user experiences through intelligent, interactive, and scalable solutions.</p>
+  </section>
+
+  <!-- Project 1 -->
+  <section class="project-section" style="background:#f1f8ff;">
+    <div class="project">
+      <h2>Healthcare Management System</h2>
+      <p>An AI-powered system that helps users manage their health effectively by providing personalized medical and lifestyle recommendations.</p>
+      <ul>
+        <li>💊 Recommends medicines, diets, workouts, and precautions based on diseases.</li>
+        <li>🧑‍⚕️ Doctor specialist suggestions (e.g., allergist for allergy).</li>
+        <li>🤖 Virtual AI Assistant for health queries.</li>
+        <li>📊 BMI calculator, Yoga Wellness (video recommendations), and Mental Wellness (mood detection with relaxing music & healthy habits).</li>
+        <li>📈 Tracks workout, sleep, and water intake with ML models.</li>
+      </ul>
+      <p class="tech">Tech: Python, Streamlit, Machine Learning</p>
+      <a href="https://github.com/Diyabaghla/HealthcareSystem" target="_blank" class="btn"><i class="fab fa-github"></i> GitHub</a>
+      <a href="https://healthcaresystem-1-2e8i.onrender.com/" target="_blank" class="btn"><i class="fa-solid fa-play"></i> Try Here</a>
+    </div>
+  </section>
+
+  <!-- Project 2 -->
+  <section class="project-section" style="background:#fff3e0;">
+    <div class="project">
+      <h2>AI Image Processing App</h2>
+      <p>A creative AI application that transforms images and enables multimodal interaction with advanced features.</p>
+      <ul>
+        <li>🖼️ Captions images with both text & audio output.</li>
+        <li>✏️ Converts images into Pencil Sketch & Cartoonify styles.</li>
+        <li>🌍 Multilingual Chatbot supporting 10+ languages.</li>
+        <li>🎙️ Voice Input & Output for natural conversation.</li>
+      </ul>
+      <p class="tech">Tech: Python, Flask, Deep Learning</p>
+      <a href="https://github.com/Diyabaghla/Imagecraft" target="_blank" class="btn"><i class="fab fa-github"></i> GitHub</a>
+      <a href="https://github.com/Diyabaghla/Imagecraft" target="_blank" class="btn"><i class="fa-solid fa-play"></i> Try Here</a>
+    </div>
+  </section>
+
+  <!-- Project 3 -->
+  <section class="project-section" style="background:#e8f5e9;">
+    <div class="project">
+      <h2>Voice & Language Translator</h2>
+      <p>A real-time language translation tool that bridges communication gaps by supporting both text and speech-based interaction.</p>
+      <ul>
+        <li>🌐 Translates text between multiple languages instantly.</li>
+        <li>🎤 Accepts voice input and generates voice output.</li>
+        <li>🗂️ Keeps track of translation history for reference.</li>
+        <li>🔊 Speech-to-Speech conversion with natural tone.</li>
+      </ul>
+      <p class="tech">Tech: Python, NLP Libraries, Speech APIs</p>
+      <a href="https://github.com/Diyabaghla/VoiceTranslator" target="_blank" class="btn"><i class="fab fa-github"></i> GitHub</a>
+      <a href="https://github.com/Diyabaghla/VoiceTranslator" target="_blank" class="btn"><i class="fa-solid fa-play"></i> Try Here</a>
+    </div>
+  </section>
+
+  <!-- Project 4 -->
+  <section class="project-section" style="background:#fce4ec;">
+    <div class="project">
+      <h2>Patient Analysis (Diabetes)</h2>
+      <p>An intelligent medical analysis system that helps detect diabetes risk and assist doctors in decision-making.</p>
+      <ul>
+        <li>🧪 Predicts diabetes using features like glucose, blood pressure, insulin, BMI, etc.</li>
+        <li>📊 Generates graphs and historical trends for patient data.</li>
+        <li>👩‍⚕️ Prioritizes patients for doctor assignment based on urgency.</li>
+        <li>📂 Batch testing for multiple patients with CSV upload support.</li>
+        <li>📑 Generates downloadable reports & summaries.</li>
+      </ul>
+      <p class="tech">Tech: Python, Streamlit, Machine Learning</p>
+      <a href="https://github.com/Diyabaghla/Diabetes_Prediction_Analysis" target="_blank" class="btn"><i class="fab fa-github"></i> GitHub</a>
+      <a href="https://diabetes-prediction-analysis-1.onrender.com/" target="_blank" class="btn"><i class="fa-solid fa-play"></i> Try Here</a>
+    </div>
+  </section>
+
+</body>
+</html>

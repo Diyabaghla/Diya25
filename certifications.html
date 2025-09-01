@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <title>Certifications</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fdfdfd;
+      color: #333;
+      line-height: 1.6;
+    }
+   
+    /* Section Title */
+    h1 {
+      margin: 2rem 8% 1.5rem;
+      font-size: 2rem;
+      color: #1565c0;
+      border-left: 6px solid #42a5f5;
+      padding-left: 10px;
+    }
+
+    /* Certification Grid */
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      padding: 0 8% 3rem;
+    }
+
+    .cert-card {
+      background: linear-gradient(135deg, #ffffff, #f9f9f9);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      border: 2px solid transparent;
+    }
+
+    .cert-card:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 10px 22px rgba(0,0,0,0.15);
+      border-color: #42a5f5;
+    }
+
+    .cert-card h3 {
+      margin: 1rem 0 0.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #2c3e50;
+      transition: color 0.3s;
+    }
+    .cert-card:hover h3 { color: #1565c0; }
+
+    .cert-card a {
+      text-decoration: none;
+      color: #1565c0;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 0.8rem;
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      background: #e3f2fd;
+      transition: all 0.3s ease;
+    }
+    .cert-card a:hover {
+      background: #42a5f5;
+      color: #fff;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+   
+
+  <h1>My Certifications</h1>
+
+  <div class="cert-grid">
+    <div class="cert-card">
+      <h3>Machine Learning – Stanford University (Coursera)</h3>
+      <a href="coursera.pdf" target="_blank">View Certificate</a>
+    </div>
+    <div class="cert-card">
+      <h3>Data Analysis – IBM</h3>
+      <a href="ibmDataAnalysis.pdf" target="_blank">View Certificate</a>
+    </div>
+    <div class="cert-card">
+      <h3>AI for Beginners – HP LIFE</h3>
+      <a href="certificate (1).pdf" target="_blank">View Certificate</a>
+    </div>
+    <div class="cert-card">
+      <h3>AI/ML for Geodata Analysis – ISRO</h3>
+      <a href="Certificate.pdf" target="_blank">View Certificate</a>
+    </div>
+    <div class="cert-card">
+      <h3>Python Programming – Kaggle</h3>
+      <a href="Diya Baghla - Python.png" target="_blank">View Certificate</a>
+    </div>
+    <div class="cert-card">
+      <h3>Supervised Machine Learning – Coursera</h3>
+      <a href="supervised.pdf" target="_blank">View Certificate</a>
+    </div>
+    <div class="cert-card">
+      <h3>Presentations with ChatGPT – Udemy</h3>
+      <a href="udemy1.pdf" target="_blank">View Certificate</a>
+    </div>
+    <div class="cert-card">
+      <h3>Cloud Computing Basics – IBM</h3>
+      <a href="ibm.pdf" target="_blank">View Certificate</a>
+    </div>
+    <div class="cert-card">
+      <h3>Hands-on Python ML Real-world Projects – Udemy</h3>
+      <a href="udemy.pdf" target="_blank">View Certificate</a>
+    </div>
+    <div class="cert-card">
+      <h3>Masters in HTML & CSS – Udemy</h3>
+      <a href="html_css_udemy.pdf" target="_blank">View Certificate</a>
+    </div>
+    <div class="cert-card">
+      <h3>AICTE Internship</h3>
+      <a href="AicteInternship.pdf" target="_blank">View Certificate</a>
+    </div>
+    <div class="cert-card">
+      <h3>Prompt Engineering – IBM</h3>
+      <a href="promptEngg_cognitiveClass.pdf" target="_blank">View Certificate</a>
+    </div>
+    <div class="cert-card">
+      <h3>Masters in Flask – Udemy</h3>
+      <a href="pythonflask_udemy.pdf" target="_blank">View Certificate</a>
+    </div>
+  </div>
+  
+
+<script>
+  // Load navbar into placeholder
+  fetch("navbar.html")
+    .then(response => response.text())
+    .then(data => document.getElementById("navbar-placeholder").innerHTML = data);
+</script>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certifications</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: #f4f4f4;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 1rem;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    .cert-card {
+      background: white;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .cert-card:hover {
+      transform: translateY(-5px) scale(1.03);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    }
+
+    .cert-card h3 {
+      margin: 1rem 0 0.5rem;
+      font-size: 1.1rem;
+      color: #333;
+    }
+
+    .cert-card a {
+      text-decoration: none;
+      color: #0077b5;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 0.5rem;
+      transition: color 0.3s;
+    }
+
+    .cert-card a:hover {
+      color: #005b8f;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <h1>My Certifications</h1>
+
+  <div class="cert-grid">
+    <div class="cert-card">
+      <h3>Machine Learning – StanfordUniversity(coursera)</h3>
+      <a href="coursera.pdf" target="_blank">View Certificate</a>
+    </div>
+    <div class="cert-card">
+      <h3>DataAnalysis – IBM</h3>
+      <a href="ibmDataAnalysis.pdf" target="_blank">View Certificate</a>
+    </div>
+    <div class="cert-card">
+      <h3>AI for Beginners – HPLIFE</h3>
+      <a href="certificate (1).pdf" target="_blank">View Certificate</a>
+    </div>
+    <div class="cert-card">
+      <h3>AI/Ml for Geodata Analysis – Isro</h3>
+      <a href="Certificate.pdf" target="_blank">View Certificate</a>
+    </div>
+    <div class="cert-card">
+      <h3>Python Programming – Kaggle</h3>
+      <a href="Diya Baghla - Python.png" target="_blank">View Certificate</a>
+    </div>
+
+    
+    <div class="cert-card">
+      <h3>supervised machine Learning-Coursera</h3>
+      <a href="supervised.pdf" target="_blank">View Certificate</a>
+    </div>
+    <div class="cert-card">
+      <h3>presentations with ChatGpt-Udemy</h3>
+      <a href="udemy1.pdf" target="_blank">View Certificate</a>
+    </div>
+    <div class="cert-card">
+      <h3>Cloud Computing Basics – IBM</h3>
+      <a href="ibm.pdf" target="_blank">View Certificate</a>
+    </div>
+    <div class="cert-card">
+      <h3>hands-on-python ml Realworld projects-Udemy</h3>
+      <a href="udemy.pdf" target="_blank">View Certificate</a>
+    </div>
+  </div>
+</body>
+</html> -->
